@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Task <span>Manager</span></h1>
+    <p class="tagline">Stay organised. Get things done.</p>
+    <div class="stats-bar">
+      <div class="stat"><strong id="stat-total">0</strong>Total</div>
+      <div class="stat"><strong id="stat-open">0</strong>Open</div>
+      <div class="stat"><strong id="stat-done">0</strong>Done</div>
+    </div>
+  </header>
+
+  <!-- Add Task Form -->
+  <section class="form-section">
+    <div class="form-card">
+      <div class="form">
+        <div class="field">
+          <label for="id">ID</label>
+          <input type="number" id="id" placeholder="1"/>
+        </div>
+        <div class="field">
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="Task title…"/>
+        </div>
+        <div class="field">
+          <label for="desc">Description</label>
+          <input type="text" id="desc" placeholder="Optional details…"/>
+        </div>
+        <button class="btn-add" onclick="addTask()">+ Add Task</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Task Grid -->
+  <section class="grid-section">
+    <div class="grid-header">
+      <div class="grid-title">Tasks</div>
+      <span class="badge" id="badge-count">0</span>
+    </div>
+    <div id="taskList"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
